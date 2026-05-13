@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>2da Ley de Newton</title>
+    <link rel="stylesheet" href="/estilos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado igual a la portada -->
+    <header class="header-titulo">
+        <h1>2da. LEY DE NEWTON</h1>
+    </header>
+
+    <div class="contenedor-principal">
+        
+        <!-- Contenido Central -->
+        <main class="contenedor-central">
+            
+            <div class="menu-problemas">
+                <div class="opcion" onclick="mostrar('horizontal')">
+                    <img src="img/horizontal.png" alt="">
+                    <p>Bloque Horizontal</p>
+                </div>
+
+                <div class="opcion" onclick="mostrar('inclinado')">
+                    <img src="img/inclinada.png" alt="">
+                    <p>Plano Inclinado</p>
+                </div>
+
+                <div class="opcion" onclick="mostrar('poleas')">
+                    <img src="img/atwood.png" alt="">
+                    <p>Poleas</p>
+                </div>
+
+                <div class="opcion" onclick="mostrar('tension')">
+                    <img src="img/tension_horizontal.png" alt="">
+                    <p>Tensión</p>
+                </div>
+
+                <div class="opcion" onclick="mostrar('bloques')">
+                    <img src="img/bloques.png" alt="">
+                    <p>Dos Bloques</p>
+                </div>
+            </div>
+
+            <!-- Bloque Horizontal -->
+            <div id="horizontal" class="problema">
+                <div class="seccion-calculo">
+                    <div class="diagrama-dcl">
+                        <img src="img/dcl_horizontal.png" alt="DCL Horizontal" class="imagen-dcl">
+                    </div>
+                    <div>
+                        <h2>Bloque Horizontal</h2>
+                        <p>Masa (kg)</p>
+                        <input type="number" id="masaH">
+                        <p>Fuerza aplicada (N)</p>
+                        <input type="number" id="fuerzaH">
+                        <p>Coeficiente de fricción (μ)</p>
+                        <input type="number" id="friccionH" step="0.01">
+                        <br>
+                        <button class="btn-calcular" onclick="calcularHorizontal()">Calcular</button>
+                    </div>
+                </div>
+                <div id="resultadoHorizontal" class="resultado"></div>
+            </div>
+
+            <!-- Plano Inclinado -->
+            <div id="inclinado" class="problema">
+                <div class="seccion-calculo">
+                    <div class="diagrama-dcl">
+                        <img src="img/dcl_inclinado.png" alt="DCL Inclinado" class="imagen-dcl">
+                    </div>
+                    <div>
+                        <h2>Plano Inclinado</h2>
+                        <p>Masa (kg)</p>
+                        <input type="number" id="masaI">
+                        <p>Ángulo (grados)</p>
+                        <input type="number" id="anguloI">
+                        <p>Coeficiente de fricción (μ)</p>
+                        <input type="number" id="friccionI" step="0.01">
+                        <br>
+                        <button class="btn-calcular" onclick="calcularInclinado()">Calcular</button>
+                    </div>
+                </div>
+                <div id="resultadoInclinado" class="resultado"></div>
+            </div>
+
+            <!-- Máquina de Atwood -->
+            <div id="poleas" class="problema">
+                <div class="seccion-calculo">
+                    <div class="diagrama-dcl">
+                        <img src="img/dcl_poleas.png" alt="DCL Poleas" class="imagen-dcl">
+                    </div>
+                    <div>
+                        <h2>Máquina de Atwood</h2>
+                        <p>Masa 1 (kg)</p>
+                        <input type="number" id="masa1">
+                        <p>Masa 2 (kg)</p>
+                        <input type="number" id="masa2">
+                        <br>
+                        <button class="btn-calcular" onclick="calcularPolea()">Calcular</button>
+                    </div>
+                </div>
+                <div id="resultadoPolea" class="resultado"></div>
+            </div>
+
+            <!-- Sistema con Tensión -->
+            <div id="tension" class="problema">
+                <div class="seccion-calculo">
+                    <div class="diagrama-dcl">
+                        <img src="img/dcl_tension.png" alt="DCL Tensión" class="imagen-dcl">
+                    </div>
+                    <div>
+                        <h2>Sistema con Tensión</h2>
+                        <p>Masa del bloque en mesa (kg)</p>
+                        <input type="number" id="masaMesa">
+                        <p>Masa del bloque colgante (kg)</p>
+                        <input type="number" id="masaColgante">
+                        <p>Coeficiente de fricción (μ)</p>
+                        <input type="number" id="friccionT" step="0.01">
+                        <br>
+                        <button class="btn-calcular" onclick="calcularTension()">Calcular</button>
+                    </div>
+                </div>
+                <div id="resultadoTension" class="resultado"></div>
+            </div>
+
+            <!-- Dos Bloques -->
+            <div id="bloques" class="problema">
+                <div class="seccion-calculo">
+                    <div class="diagrama-dcl">
+                        <img src="img/dcl_bloques.png" alt="DCL Bloques" class="imagen-dcl">
+                    </div>
+                    <div>
+                        <h2>Dos Bloques en Contacto</h2>
+                        <p>Masa del bloque 1 (kg)</p>
+                        <input type="number" id="masaB1">
+                        <p>Masa del bloque 2 (kg)</p>
+                        <input type="number" id="masaB2">
+                        <p>Fuerza aplicada (N)</p>
+                        <input type="number" id="fuerzaB">
+                        <br>
+                        <button class="btn-calcular" onclick="calcularBloques()">Calcular</button>
+                    </div>
+                </div>
+                <div id="resultadoBloques" class="resultado"></div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="/scripts.js"></script>
+
+    <div style="text-align: center;">
+        <a href="portada.html">
+            <button class="volver">Volver</button>
+        </a>
+    </div>
+
+</body>
+</html>

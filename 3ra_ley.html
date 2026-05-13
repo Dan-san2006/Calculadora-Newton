@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>3ra Ley de Newton</title>
+    <link rel="stylesheet" href="/estilos.css">
+      
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<body>
+    <div class="header-titulo">
+        <h1>TERCERA LEY DE NEWTON</h1>
+    </div>
+
+    <main class="contenedor">
+        <p class="subtitulo">Simulador: Acción y Reacción</p>
+
+        <div class="layout-horizontal">
+            
+            <div class="panel-info">
+                <div class="cronometro" style="margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">
+                    TIEMPO: <span id="txtTiempo">0.00</span> s
+                </div>
+
+                <div class="controles-simulador-lateral">
+                    <div class="control-group">
+                        <label for="masaA">Masa A (kg):</label>
+                        <input type="number" id="masaA" value="10" step="0.1" min="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="masaB">Masa B (kg):</label>
+                        <input type="number" id="masaB" value="10" step="0.1" min="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="fuerzaInput">Fuerza (N):</label>
+                        <input type="number" id="fuerzaInput" value="50" step="1" min="1">
+                    </div>
+
+                    <button class="btn-lanzar" onclick="iniciarSimulacion()" style="width: 100%; margin-top: 15px;">
+                        ¡COLISIÓN!
+                    </button>
+                </div>
+            </div>
+
+            <!-- CENTRO: CANVAS -->
+            <canvas id="simuladorCanvas" width="800" height="400"></canvas>
+
+            <!-- PANEL DERECHO: RESULTADOS -->
+            <div class="resultados-lateral">
+                <div class="datos-bloque-a">
+                    <p style="font-size: 1.2rem;">BLOQUE AZUL</p>
+                    <p>F₁ = <span id="resF1">0.0</span> N</p>
+                    <p>a₁ = <span id="resA1">0.0</span> m/s²</p>
+                </div>
+                <hr style="border-color: #333; margin: 15px 0;">
+                <div class="datos-bloque-b">
+                    <p style="font-size: 1.2rem;">BLOQUE ROSA</p>
+                    <p>F₂ = <span id="resF2">0.0</span> N</p>
+                    <p>a₂ = <span id="resA2">0.0</span> m/s²</p>
+                </div>
+            </div>
+
+        </div> 
+    </main>
+
+    <script src="scripts.js"></script>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="portada.html">
+            <button class="volver">Volver</button>
+        </a>
+    </div>
+</body>
+
+</html>
