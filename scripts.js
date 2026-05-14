@@ -1,9 +1,9 @@
 function mostrar(id) {
     let problemas = document.querySelectorAll(".problema");
     problemas.forEach(function(seccion){
-        seccion.classList.remove("activo"); // Quitamos la clase activo de todos
+        seccion.classList.remove("activo"); 
     });
-    document.getElementById(id).classList.add("activo"); // Se la ponemos al seleccionado
+    document.getElementById(id).classList.add("activo"); 
 }
 
 function calcularHorizontal() {
@@ -28,7 +28,7 @@ function calcularHorizontal() {
     " m/s²";
 }
 
-/*Plano inclinado*/
+
 function calcularInclinado(){
 
     let masa = parseFloat(
@@ -94,7 +94,6 @@ function calcularInclinado(){
     " m/s²";
 }
 
-//poleas
 function calcularPolea(){
 
     let m1 = parseFloat(
@@ -158,7 +157,6 @@ function calcularPolea(){
 
 }
 
-//tension en mesa
 
 function calcularTension(){
 
@@ -227,7 +225,7 @@ function calcularTension(){
     "El bloque colgante baja";
 
 }
-/* DOS BLOQUES */
+
 function calcularBloques(){
     
     let m1 = parseFloat(document.getElementById("masaB1").value);
@@ -247,8 +245,6 @@ function calcularBloques(){
     "Fuerza de contacto: " + contacto.toFixed(2) + " N";
 }
 
-
-//3ra ley
 
 let tiempoInicial = 0;
 let tiempoTranscurrido = 0;

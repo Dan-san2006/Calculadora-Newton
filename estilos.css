@@ -48,32 +48,31 @@ h1 {
     margin: 0 auto;
 }
 
-/* Ajuste para los paneles laterales */
 .panel.lateral {
     width: 250px;
     background: rgba(137, 135, 135, 0.1);
     padding: 20px;
     border-radius: 15px;
-    text-align: left; /* Para que el texto sea más fácil de leer */
+    text-align: left; 
 }
 
 item-info p {
-    font-size: 16px; /* ← Letra más grande para el título */
-    color: #ffffff;  /* Un blanco más puro para que resalte */
+    font-size: 16px; 
+    color: #ffffff; 
     margin: 5px 0;
 }
 
 .item-info code {
     display: block;
     background: #111;
-    padding: 12px;   /* Más espacio interno para la fórmula */
+    padding: 12px;   
     border-radius: 4px;
     color: #00ffcc; 
     font-family: monospace;
-    font-size: 20px; /* ← ¡Aquí es donde la fórmula se hace grande! */
+    font-size: 20px; 
     font-weight: bold;
     border-left: 4px solid #5b8cff;
-    text-align: center; /* Centrar la fórmula dentro de su cuadrito negro */
+    text-align: center; 
 }
 
 
@@ -168,7 +167,6 @@ item-info p {
     display: block;
 }
 
-/* Estilos para poner el Diagrama y los Inputs a la par */
 .seccion-calculo {
     display: flex;
     align-items: center;
@@ -281,7 +279,6 @@ input:focus {
 }
 
 
-/*3ra ley*/
 canvas {
     margin: 0 !important;        
     border: 2px solid #4b5aff;
@@ -342,7 +339,7 @@ cronometro {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* El espacio entre cuadros */
+    gap: 20px; 
     margin: 20px auto;
 }
 
@@ -396,7 +393,7 @@ input[type="range"] { cursor: pointer; width: 150px; }
 .control-group input[type="number"] {
     background: #222;
     border: 1px solid #333;
-    color: #39ff14; /* Color verde neón para los números */
+    color: #39ff14; 
     font-family: 'Orbitron', sans-serif;
     padding: 8px;
     border-radius: 5px;
